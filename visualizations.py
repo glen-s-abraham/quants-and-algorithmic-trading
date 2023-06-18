@@ -20,4 +20,5 @@ daily_returns = cl_price.pct_change()
 fig,ax = plt.subplots()
 
 ax.set(title='Mean returns',xlabel="stocks",ylabel='Mean returns')
-plt.bar(x=daily)
+plt.bar(x=daily_returns.columns,height=daily_returns.mean())
+plt.bar(x=daily_returns.columns,height=daily_returns.std())
